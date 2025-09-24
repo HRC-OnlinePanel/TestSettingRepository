@@ -31,3 +31,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+
+tasks.register("bootRunOpen") {
+    dependsOn("bootRun")
+    doLast {
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            "cmd /c start http://localhost:8080".execute()
+        }
+    }
+}
