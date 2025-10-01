@@ -1,0 +1,25 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title th:text="${title}">Demo</title>
+  <link th:href="@{/css/main.css}" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1 th:text="${title}">Demo Home</h1>
+    <nav>
+      <a th:href="@{/}">Home</a> |
+      <a th:href="@{/about}">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <p th:text="${message}">메시지</p>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Demo</small>
+  </footer>
+</body>
+</html>
